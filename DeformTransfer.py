@@ -101,11 +101,11 @@ def Transfer(F, Blist, N, indices):
 
 def main():
     print "reading source obj file"
-    sourceV, M, sourcevertices, sourcetrianglevertices, sourceindices = readObj("/home/oliver/Downloads/face-poses/face-reference.obj")
+    sourceV, M, sourcevertices, sourcetrianglevertices, sourceindices = readObj("example/face-reference.obj")
     print "reading source transform obj file"
-    transV, M, transvertices, transtrianglevertices, transindices = readObj("/home/oliver/Downloads/face-poses/face-01-anger.obj")
+    transV, M, transvertices, transtrianglevertices, transindices = readObj("example/face-01-anger.obj")
     print "reading target obj file"
-    targetV, M, targetvertices, targettrianglevertices, targetindices = readObj("/home/oliver/Downloads/face-poses/face-05-laugh.obj")
+    targetV, M, targetvertices, targettrianglevertices, targetindices = readObj("example/face-05-laugh.obj")
 
     N = targetV
 
@@ -152,7 +152,7 @@ def main():
 
     #save results
     print "Writing to file"
-    resultfile = "/home/oliver/Downloads/face-poses/result.obj"
+    resultfile = "example/result.obj"
     f = open(resultfile, "w")
     for i in range(0, N):
         f.write("v")
